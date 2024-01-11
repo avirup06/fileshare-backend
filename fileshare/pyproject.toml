@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "fileshare"
+version = "0.1.0"
+description = "File Sharing Backend"
+authors = [
+    "Avirup Banerjee <avirupbanerjee.chat@gmail.com>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = {extras = ["all"], version = "^0.103.2"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+pyjwt = "^2.8.0"
+pydantic = "^2.5.1"
+requests = "^2.31.0"
+psycopg2 = "^2.9.9"
+pyotp = "^2.9.0"
+sqlalchemy = "^2.0.24"
+rocketry = "^2.5.1"
+psutil = "^5.9.7"
+pydantic-settings = "^2.1.0"
+
+
+[tool.poetry.scripts]                                                           
+server = "scripts.server:start"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.4"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
